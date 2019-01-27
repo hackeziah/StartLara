@@ -23,7 +23,11 @@ Route::get('/', function () {
 //     return view('pages.contacts');
 // });
 
-Route::get('/about', 'PagesController@about');
-Route::get('/contacts', 'PagesController@contacts');
-Route::resource('/posts/create', 'PostsController@create');
-Route::resource('posts', 'PostsController');
+// Route::get('/about', 'PagesController@about');
+// Route::get('/contacts', 'PagesController@contacts');
+// Route::get('/posts/create', 'PostsController@create');
+// Route::post('/posts/store', 'PostsController@store');
+// Route::get('/posts/edit/{$id?}', 'PostsController@edit');
+
+
+// Route::resource('/posts', 'PostsController');

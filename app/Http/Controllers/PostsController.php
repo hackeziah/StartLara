@@ -27,13 +27,12 @@ class PostsController extends Controller
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
+    */
     public function create()
     {
-        $category = Category::all();
-        echo $category;
-       // return view('posts.create', compact('category'));
-
+        $cat = Category::all(); 
+          return view('posts.create',compact('cat'));
+       
      
     }
 
@@ -44,8 +43,18 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    { 
+        // return redirect()->intended('/posts.create');
+        // dd($request);
+        // return Post::create([
+        //     'title' => $request['title'],
+        //     'body' => $request['body'],
+        //     'category' => $request['category'],
+            
+        // ])->redirect('/posts');
+
+
+
     }
 
     /**
@@ -67,7 +76,14 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $posts = Post::find($id);
+        // Redirect to state list if updating state wasn't existed
+        // if ($employee == null || count($employee) == 0) {
+        //     return redirect()->intended('/employee-management');
+        // }
+        $divisions = Post::all();
+        return view('posts.index',['posts'=>$posts]);
+ 
     }
 
     /**

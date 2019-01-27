@@ -7,6 +7,8 @@
 
         <title>Login</title>
 
+        <link rel="stylesheet" href="/css/app.css">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -65,7 +67,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height" id="app">
            
             <div class="content">
                 <div class="title m-b-md">
@@ -78,9 +80,15 @@
                    <button><a href="<?php echo url('about') ?>">About</a></button>
                    <button><a href="<?php echo url('contacts') ?>">Contact</a></button>
                    <button><a href="<?php echo url('posts') ?>">Post</a></button>
+                   <button><router-link to="/student">Student</router-link></button>
 
                 </div>
             </div>
+            <div class="">
+                <router-view></router-view>
+            </div>
         </div>
+
+        <script src="/js/app.js"></script>
     </body>
 </html>
