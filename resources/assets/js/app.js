@@ -15,6 +15,7 @@ vue.use(VueRouter);
 
 let routes = [
     { path: '/student', component: require('./components/StudentComponet.vue') },
+    
 ]
 
 const router = new VueRouter({
